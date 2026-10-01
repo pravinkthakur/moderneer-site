@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moderneer.co.uk/sitemap.xml
