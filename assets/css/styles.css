@@ -607,3 +607,16 @@ body.site{font-size:16px;line-height:1.58}
 .readiness-state span{
   font-size:12px !important;
 }
+
+
+/* March GTM messaging alignment */
+.decision-loop{grid-template-columns:repeat(4,1fr)}
+.architecture-map.architecture-map-four{grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr}
+@media(max-width:1080px){
+  .decision-loop{grid-template-columns:repeat(2,1fr)}
+  .architecture-map.architecture-map-four{grid-template-columns:1fr}
+  .architecture-map.architecture-map-four>i{transform:rotate(90deg)}
+}
+@media(max-width:620px){
+  .decision-loop{grid-template-columns:1fr}
+}

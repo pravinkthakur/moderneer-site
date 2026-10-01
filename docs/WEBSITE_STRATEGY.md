@@ -1,32 +1,81 @@
-# Moderneer website strategy — decision-first edition
+# Moderneer website strategy — evidence to executive judgement
 
-## Category
+## Source of truth for messaging
 
-**Decision Engineering**
+The public story is aligned to the March 2026 Moderneer GTM deck, the March follow-up email, and the current Moderneer Edge / Telos implementation.
 
 ## Core proposition
 
 **Turn signals into decisions you can defend.**
 
-Every enterprise is full of signals. Financial systems, customers, operations, people, documents, technology and markets each reveal part of reality. No single signal is the truth and no dashboard makes the decision.
+The problem is not lack of data. Enterprises are evidence-rich but judgement-poor. Moderneer connects fragmented evidence, interprets it and surfaces the decisions that require executive judgement.
 
-Moderneer starts with the question leadership is trying to answer, identifies the evidence that matters, evaluates how trustworthy that evidence is and turns it into a decision case with the reasoning exposed.
+## Category language
 
-## Product hierarchy
+Primary category language:
+- **System of Judgement**
+- **Operating judgement layer**
+- **Decision layer**
 
-- Moderneer: Decision Engineering platform
-- Telos Studio: System of Judgement
-- Outcome Engineering: the closed decision-to-outcome learning loop
-- Technology & Transformation Intelligence: deepest current packaged application
+"Decision Engineering" may describe the discipline, but must not imply that the final decision is specified before the evidence is assessed.
 
 ## Canonical operating model
 
-**Frame → Connect → Trust → Understand → Decide → Commit → Learn**
+**Frame → Connect → Assess → Trust → Synthesize → Judge → Commit → Learn**
 
-## Canonical principle
+## Canonical rule
 
-**Any signal can become evidence. Any decision can define the evidence it needs.**
+**The question shapes the evidence. The evidence surfaces the decisions. Leadership makes the judgement.**
 
-## Narrative discipline
+## Product hierarchy
 
-The homepage must work as a 10-minute executive pitch. Telos must work as the 30-minute product deep dive. The site must prove horizontal decision capability without implying that every possible enterprise data source is already packaged today.
+- **Moderneer Edge** — distributed evidence acquisition and source-level analysis.
+- **Moderneer Platform** — configurable models, rules and orchestration.
+- **Telos Studio** — leadership workspace for posture, recommendations, Decision Agenda, alternatives and commitments.
+- **Technology & Transformation Intelligence** — deepest packaged application today.
+
+## Decision Scope
+
+Decision Scope frames:
+- why the work is being done
+- audience
+- horizon
+- business scope
+- considerations
+- evidence availability
+- decision questions
+
+It frames the enquiry. It does not pre-determine the final Decision Agenda.
+
+## Decision Agenda
+
+Current Edge code synthesises Decision Agenda themes from:
+- Fix Now / Invest / Assure recommendations
+- decision options
+- executive considerations
+- linked risks and evidence
+
+Therefore public copy should say Telos **derives / synthesises / surfaces** the executive decisions leadership needs to make.
+
+## Trust
+
+Confidence, reliability and integrity are central differentiation themes. Evidence type and decision readiness should remain visible, and the site should avoid certainty that outruns the evidence.
+
+## Commercial entry point
+
+Current March GTM:
+**30-day Transformation Baseline** for one critical transformation, modernisation or AI initiative.
+
+Customer receives:
+- current-state baseline
+- cross-domain risk / posture view
+- prioritised recommendations linked to impact
+- initial commitments / ownership workflow
+
+## Horizontal potential
+
+Telos includes multiple executive consideration lenses and is designed to expand across domains. Public copy must distinguish this design intent from current packaged domain maturity.
+
+## Capability claims to avoid
+
+Do not market meeting / communication intelligence or mature competitive intelligence as delivered capabilities unless current implementation evidence supports the claim.

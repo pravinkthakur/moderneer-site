@@ -40,15 +40,15 @@ journeyButtons.forEach((button) => {
 
 const cases = {
   growth: {
-    question: 'Should we accelerate expansion into Market X or phase the investment?',
+    question: 'Is Market X ready to accelerate, and what does leadership need to decide before committing?',
     audience: 'CEO · CFO · COO · 12-month horizon',
-    signals: 'Salesforce pipeline · customer feedback · financial assumptions · operational capacity · supplier exposure · competitive intelligence',
+    signals: 'Salesforce pipeline · external intelligence · available files · operational context',
     gap: 'Operational readiness in the new market is not yet evidenced strongly enough.',
     readiness: 'Needs validation',
-    next: 'Validate fulfilment capacity and unit economics before committing to full acceleration.'
+    next: 'Validate operating capacity and the available economic evidence before leadership commits to acceleration.'
   },
   technology: {
-    question: 'Should we modernise the platform now or phase the investment?',
+    question: 'What does the evidence say about platform modernisation, and which choices require leadership judgement?',
     audience: 'CTO · CIO · CFO · 18-month horizon',
     signals: 'Architecture findings · source control · delivery flow · incidents · observability · cloud cost · roadmap dependencies',
     gap: 'Migration complexity and transition risk remain insufficiently quantified.',
