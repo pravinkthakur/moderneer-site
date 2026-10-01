@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs>
+  <radialGradient id="g1" cx="0" cy="0" r="1" gradientTransform="translate(240 80) rotate(34) scale(520 420)">
+    <stop stop-color="#16434A"/><stop offset="1" stop-color="#07090D" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="g2" cx="0" cy="0" r="1" gradientTransform="translate(1020 40) rotate(130) scale(420 360)">
+    <stop stop-color="#2A264F"/><stop offset="1" stop-color="#07090D" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="1200" height="630" fill="#07090D"/>
+<rect width="1200" height="630" fill="url(#g1)"/><rect width="1200" height="630" fill="url(#g2)"/>
+<g transform="translate(96 104)">
+  <g transform="translate(46 46) rotate(45) translate(-46 -46)">
+    <rect x="14" y="14" width="64" height="64" fill="none" stroke="#F6F7F9" stroke-width="4"/>
+    <rect x="27" y="27" width="38" height="38" fill="none" stroke="#6AE6EF" stroke-width="4"/>
+  </g>
+  <text x="108" y="60" fill="#F6F7F9" font-family="Inter,Arial,sans-serif" font-size="44" font-weight="700">moderneer</text>
+</g>
+<text x="96" y="305" fill="#F6F7F9" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="700" letter-spacing="-3">Make technology decidable.</text>
+<text x="96" y="375" fill="#AAB5C3" font-family="Inter,Arial,sans-serif" font-size="28">Outcome Engineering for enterprise technology leaders.</text>
+<text x="96" y="520" fill="#6AE6EF" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="2">EVIDENCE → JUDGEMENT → ACTION</text>
+</svg>
