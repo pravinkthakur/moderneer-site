@@ -5,7 +5,19 @@ Official marketing site for **Moderneer** and **Telos Studio**.
 ## Positioning
 
 - **Moderneer** — Outcome Engineering for enterprise technology leaders.
-- **Telos Studio** — the executive decision-intelligence experience for Moderneer.
+- **Telos Studio** — the executive decision-intelligence layer for Moderneer.
+
+## Executive narrative
+
+The homepage follows a single-page buying story:
+
+**Problem → Outcome Engineering → Evidence → What you get → Telos Studio → Where it fits → Trust → Executive briefing**
+
+The Telos page is a product-level deep dive:
+
+**Decision Agenda → Executive workflow → Fix Now / Invest / Assure → Decision trust → Evidence → Briefing**
+
+All product claims are grounded in the current Moderneer/Telos implementation. Public copy avoids invented customers, ROI claims or certifications.
 
 ## Structure
 
@@ -18,27 +30,16 @@ Official marketing site for **Moderneer** and **Telos Studio**.
 ├── robots.txt
 ├── sitemap.xml
 ├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   └── app.js
+│   ├── css/styles.css
+│   ├── js/app.js
 │   └── images/
-│       ├── favicon.svg
-│       ├── moderneer-mark.svg
-│       ├── moderneer-wordmark.svg
-│       ├── social-preview.svg
-│       └── telos-decision-visual.svg
 ├── design/
-│   ├── README.md
-│   └── tokens.json
 └── docs/
-    ├── CONTENT_GUIDE.md
-    └── WEBSITE_STRATEGY.md
 ```
 
 ## Local preview
 
-Run any static web server from the repository root, for example:
+Run any static web server from the repository root:
 
 ```bash
 python -m http.server 8080
@@ -48,26 +49,23 @@ Then open `http://localhost:8080`.
 
 ## GitHub Pages
 
-The repository is designed to publish directly from the root of the `main` branch.
+The site deploys from `main` using `.github/workflows/pages.yml`.
 
-`CNAME` is already set to:
+`CNAME` is set to:
 
 ```text
 moderneer.co.uk
 ```
 
-After enabling GitHub Pages, configure the DNS records at the domain provider and then enable HTTPS in GitHub Pages when available.
+## Contact
 
-## Experience
+The executive briefing CTA opens email to `hello@moderneer.co.uk`. No non-functional demo form is published.
 
-The homepage is a single-page executive narrative:
+## Design principles
 
-**Problem → Outcome Engineering → Evidence → Telos Studio → Action → Outcomes → Trust → Executive briefing**
-
-The design deliberately uses a light, editorial Moderneer canvas with a dark product-led Telos section so the product reveal carries the strongest visual weight.
-
-The executive briefing CTA currently opens an email to `hello@moderneer.com`; there is no non-functional demo form on the live homepage.
-
-## Deployment
-
-Published with GitHub Pages from the `main` branch using the Pages Actions workflow.
+- Premium enterprise editorial rather than generic SaaS
+- One continuous story on the homepage
+- Dark Telos product sections provide the strongest visual contrast
+- Real product constructs instead of vague feature claims
+- Visible uncertainty and evidence provenance are part of the product story
+- Responsive navigation and reduced-motion support are included
