@@ -39,3 +39,14 @@ Official marketing site for **Moderneer** and **Telos Studio**.
 ## Deployment
 
 The static site deploys from `main` through `.github/workflows/pages.yml` to `https://moderneer.co.uk/`.
+
+
+## UX QA standards
+
+The public site follows these production rules:
+- Core content is visible without JavaScript; motion is enhancement only.
+- No essential marketing or product-interface copy is intentionally set below 10px, with most supporting text at 12–14px or above.
+- Native system fonts avoid third-party font loading failures and inconsistent fallbacks.
+- Hero and product visuals use stable grid layouts rather than fragile absolute positioning.
+- Primary headings use a restrained responsive scale; body copy targets normal reading sizes.
+- The homepage remains the 10-minute executive story; Telos remains the 30-minute product deep dive.

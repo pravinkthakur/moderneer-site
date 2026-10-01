@@ -166,3 +166,362 @@ img{display:block;max-width:100%}
 .recommendation-strip .assure span{color:var(--mint);background:rgba(154,231,185,.09)}
 @media(max-width:900px){.recommendation-strip{grid-template-columns:1fr 1fr}.recommendation-strip>div{grid-column:1/-1}}
 @media(max-width:620px){.recommendation-strip{grid-template-columns:1fr}.recommendation-strip>div{grid-column:auto}}
+
+
+/* =========================================================
+   UX QA hardening — October 2026
+   Accessibility, typography, resilience, and layout clarity.
+   ========================================================= */
+:root{
+  --max:1180px;
+}
+
+/* Use a reliable native type stack; no render-blocking third-party font dependency. */
+body.site,
+.brand,
+.hero h1,
+.system-core b,
+.section-intro h2,
+.problem-grid h2,
+.trust-grid h2,
+.telos-heading h2,
+.technology-grid h2,
+.outcome-grid h2,
+.contact-card h2,
+.deep-copy h2,
+.scope-question h3,
+.decision-rule,
+.decision-loop b,
+.trust-quote,
+.journey-panel h3,
+.decision-mini b,
+.ask-mini p,
+.case-question h3,
+.outcome-loop b,
+.telos-hero h1,
+.deep-copy h3,
+.ui-title b,
+.gauge-arc span,
+.decision-ui-top b,
+.decision-ui-cards b,
+.chat-ui-top b{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+/* Never make core content depend on JavaScript to be visible. */
+.reveal,
+.reveal.show{
+  opacity:1 !important;
+  transform:none !important;
+}
+
+/* Baseline readable type. */
+body.site{font-size:16px;line-height:1.58}
+.eyebrow{font-size:12px;letter-spacing:.13em}
+.button{font-size:14px;min-height:46px;white-space:nowrap}
+.button-small{font-size:13px;min-height:40px}
+.text-link{font-size:14px}
+.desktop-nav{font-size:13px;gap:20px}
+.site-header .button{flex-shrink:0}
+
+/* Hero: calmer scale, robust visual composition, no clipped signal chips. */
+.hero{padding:82px 0 94px}
+.hero-grid{gap:64px}
+.hero h1{font-size:clamp(52px,5.7vw,76px);line-height:.98;letter-spacing:-.052em}
+.hero-lede{font-size:18px;line-height:1.6;max-width:660px}
+.hero-principle{font-size:13px;line-height:1.45}
+.hero-system{
+  min-height:0;
+  padding:28px;
+  display:grid;
+  gap:22px;
+  align-content:center;
+  overflow:visible;
+}
+.hero-system:after{inset:10px}
+.signal-cloud{
+  position:static;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px;
+}
+.signal-cloud span{
+  position:static;
+  font-size:12px;
+  line-height:1.25;
+  padding:10px 12px;
+  text-align:center;
+}
+.system-core{
+  position:static;
+  transform:none;
+  width:auto;
+  min-height:205px;
+  padding:28px;
+}
+.system-core small{font-size:11px}
+.system-core b{font-size:25px;max-width:340px}
+.core-stages span{font-size:11px}
+
+/* Section rhythm and headings. */
+.section{padding:96px 0}
+.dark-section{padding:96px 0}
+.trust-section{padding:98px 0}
+.telos-section{padding:104px 0}
+.contact-section{padding:92px 0}
+.section-intro h2,
+.problem-grid h2,
+.trust-grid h2,
+.telos-heading h2,
+.technology-grid h2,
+.outcome-grid h2,
+.deep-copy h2{
+  font-size:clamp(36px,4.1vw,54px);
+  line-height:1.08;
+  letter-spacing:-.042em;
+}
+.section-intro>p,
+.dark-lede,
+.deep-copy>p{font-size:17px;line-height:1.6}
+
+/* Problem framing. */
+.problem-grid{gap:84px}
+.problem-stack article>span{font-size:11px}
+.problem-stack b{font-size:19px}
+.problem-stack p{font-size:14px;line-height:1.5}
+
+/* Decision scope. */
+.scope-board{margin-top:50px}
+.scope-question,.scope-fields{padding:36px}
+.scope-question small{font-size:11px}
+.scope-question h3{font-size:30px;line-height:1.14}
+.scope-meta span{font-size:12px}
+.scope-fields article>span{font-size:11px}
+.scope-fields b{font-size:15px}
+.scope-fields p{font-size:13px;line-height:1.45}
+.decision-rule{font-size:clamp(25px,2.8vw,36px);margin-top:58px}
+
+/* Seven-step decision model. */
+.decision-loop{margin-top:50px}
+.decision-loop article{padding:23px 18px;min-height:178px}
+.decision-loop article>span{font-size:11px}
+.decision-loop b{font-size:18px}
+.decision-loop p{font-size:13px;line-height:1.45}
+
+/* Mirror / evidence trust. */
+.trust-grid{gap:68px}
+.trust-grid>div:first-child>p{font-size:17px}
+.trust-quote{font-size:22px}
+.mirror-card{padding:28px}
+.mirror-top{font-size:11px}
+.trust-dimensions small{font-size:10px}
+.trust-dimensions strong{font-size:32px}
+.trust-dimensions p{font-size:12px;line-height:1.45}
+.evidence-state span,.readiness-state span{font-size:11px;padding:7px 10px}
+.readiness-state small{font-size:10px}
+
+/* Homepage Telos journey. */
+.telos-heading{gap:64px}
+.telos-heading>div:last-child p{font-size:16px;line-height:1.6}
+.journey-window{margin-top:54px}
+.journey-nav button{font-size:12px;padding:16px 14px}
+.journey-nav button span{font-size:10px}
+.journey-panel{padding:40px;gap:48px}
+.journey-panel small{font-size:10px}
+.journey-panel h3{font-size:29px}
+.journey-panel p{font-size:15px;line-height:1.55}
+.scope-mini span,.connector-cloud span{font-size:12px}
+.mini-gauges b{font-size:14px}
+.decision-mini>span{font-size:11px}
+.decision-mini b{font-size:19px}
+.commit-mini span{font-size:12px}
+.commit-mini b{font-size:10px}
+.ask-mini p{font-size:18px}
+.ask-mini span{font-size:12px}
+
+/* Cross-functional examples. */
+.decision-demo{margin-top:48px}
+.case-tabs button{font-size:13px}
+.case-question small,.case-grid small{font-size:10px}
+.case-question h3{font-size:29px}
+.case-question p{font-size:13px}
+.case-grid p{font-size:14px;line-height:1.5}
+.case-readiness{font-size:12px}
+
+/* Technology pack is proof, not fine print. */
+.technology-grid{gap:64px}
+.technology-grid>div:first-child>p{font-size:16px;line-height:1.6}
+.technology-proof span{font-size:11px}
+.technology-proof strong{font-size:24px}
+.pillar-field span{font-size:13px;line-height:1.35;padding:13px 14px}
+
+/* Outcome loop: stable grid rather than fragile arrow-wrapped flex. */
+.outcome-grid{gap:64px}
+.outcome-grid>div:first-child>p{font-size:16px}
+.outcome-loop{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  justify-content:initial;
+}
+.outcome-loop i{display:none}
+.outcome-loop span{min-width:0;padding:18px}
+.outcome-loop b{font-size:16px}
+.outcome-loop small{font-size:12px;line-height:1.4}
+
+/* CTA and footer. */
+.contact-card{padding:48px 50px;gap:54px}
+.contact-card h2{font-size:clamp(34px,3.6vw,46px);line-height:1.08;letter-spacing:-.04em}
+.contact-card p{font-size:16px;line-height:1.58}
+.contact-action>span{font-size:12px}
+.site-footer p,.footer-links,.footer-meta{font-size:12px}
+
+/* Telos deep dive: keep the 30-minute story readable. */
+.telos-hero{padding:88px 0 96px}
+.telos-hero-grid{gap:72px}
+.telos-hero h1{font-size:clamp(50px,5.6vw,72px);line-height:.98;letter-spacing:-.052em}
+.telos-hero p{font-size:18px;line-height:1.6}
+.telos-loop-card>small{font-size:10px}
+.loop-vertical b{font-size:11px}
+.telos-loop-card>p{font-size:12px;line-height:1.5}
+
+/* The tiny right-side number rail added noise and was not readable. */
+.chapter-rail{display:none !important}
+
+.deep-section{padding:96px 0}
+.chapter-kicker{font-size:12px}
+.chapter-kicker span{font-size:11px}
+.deep-note{font-size:15px !important;line-height:1.5}
+.product-chrome{font-size:11px}
+.wizard-steps span{font-size:11px}
+.wizard-content label{font-size:11px}
+.field-row small{font-size:10px}
+.field-row b{font-size:13px}
+.scope-question-list span{font-size:12px}
+.signal-categories span{font-size:12px}
+.connector-list small{font-size:10px}
+.connector-list span{font-size:12px}
+.pack-callout small{font-size:10px}
+.pack-callout p{font-size:13px !important}
+.assessment-head{font-size:12px}
+.assessment-head b{font-size:13px}
+.pillar-bars span{font-size:11px}
+.product-shot-label{font-size:13px}
+.product-shot-label small{font-size:11px}
+.decision-anatomy small{font-size:10px}
+.decision-anatomy p{font-size:13px;line-height:1.5}
+.trust-definitions p{font-size:13px !important}
+.state-pairs small{font-size:10px}
+.state-pairs p{font-size:12px !important}
+.option-types span{font-size:12px}
+.consequence-grid small{font-size:10px}
+.consequence-grid p{font-size:13px;line-height:1.5}
+.commitment-head{font-size:12px}
+.commitment-board article small{font-size:10px}
+.committed{font-size:11px}
+.commitment-meta small{font-size:10px}
+.commitment-meta b{font-size:13px}
+.ask-prompts span{font-size:12px}
+.learn-path small{font-size:10px}
+.metric-row small{font-size:10px}
+.metric-row span{font-size:12px}
+.arch-col small{font-size:10px}
+.arch-col span{font-size:12px}
+.architecture-principles span{font-size:11px}
+
+/* Product-accurate views: readable at normal zoom. */
+.ui-title span{font-size:12px}
+.ui-title>small{font-size:10px}
+.mirror-gauges-ui small{font-size:10px}
+.mirror-gauges-ui p{font-size:12px;line-height:1.45}
+.decision-ui-top{font-size:11px}
+.decision-ui-metrics span{font-size:11px}
+.decision-ui-cards small,.decision-ui-cards em{font-size:10px}
+.decision-ui-cards b{font-size:16px}
+.decision-ui-cards p{font-size:12px;line-height:1.5}
+.decision-ui-cards>article>span{font-size:10px}
+.chat-ui-top span,.chat-ui-top i{font-size:11px}
+.system-message{font-size:12px}
+.chat-user{font-size:13px}
+.chat-assistant small{font-size:10px}
+.chat-assistant p{font-size:12px;line-height:1.5}
+.chat-assistant span{font-size:11px}
+.chat-ui-input>span{font-size:12px}
+.chat-ui-input b{font-size:11px}
+
+/* Recommendation portfolio and executive lenses. */
+.executive-lenses>small{font-size:10px}
+.executive-lenses>div span{font-size:12px}
+.executive-lenses>p{font-size:13px;line-height:1.5}
+.recommendation-strip small{font-size:10px}
+.recommendation-strip>div b{font-size:18px}
+.recommendation-strip article span{font-size:11px}
+.recommendation-strip article p{font-size:12px;line-height:1.45}
+
+/* Tablet. */
+@media(max-width:1080px){
+  .hero-grid{gap:42px}
+  .signal-cloud{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .system-core{min-height:190px}
+  .problem-grid,.trust-grid,.telos-hero-grid,.deep-grid,.deep-grid.reverse{gap:46px}
+}
+
+/* Mobile. */
+@media(max-width:760px){
+  .shell{width:min(calc(100% - 36px),var(--max))}
+  .hero{padding:52px 0 68px}
+  .hero h1{font-size:clamp(42px,13vw,52px);line-height:1}
+  .hero-lede{font-size:17px}
+  .hero-system{padding:18px;gap:16px}
+  .signal-cloud{grid-template-columns:1fr 1fr}
+  .signal-cloud span{font-size:11px;padding:9px}
+  .system-core{width:auto;min-height:185px;padding:22px}
+  .system-core b{font-size:22px}
+  .core-stages{gap:7px}
+  .core-stages span{font-size:10px}
+
+  .section,.dark-section,.trust-section,.telos-section,.contact-section,.telos-hero,.deep-section{padding:68px 0}
+  .section-intro h2,.problem-grid h2,.trust-grid h2,.telos-heading h2,.technology-grid h2,.outcome-grid h2,.contact-card h2,.deep-copy h2{
+    font-size:clamp(32px,9vw,40px);
+    line-height:1.08;
+  }
+  .telos-hero h1{font-size:clamp(42px,12vw,52px)}
+  .action-row{gap:15px}
+  .button{width:auto;max-width:100%}
+
+  .scope-question,.scope-fields{padding:24px}
+  .scope-question h3{font-size:26px}
+  .decision-rule{font-size:24px;margin-top:44px}
+
+  .decision-loop{grid-template-columns:1fr}
+  .decision-loop article{min-height:0}
+
+  .journey-nav{grid-template-columns:repeat(2,1fr)}
+  .journey-nav button:nth-child(n){border-right:1px solid var(--dark-line)}
+  .journey-nav button:nth-child(2n){border-right:0}
+  .journey-panel{padding:25px 20px}
+  .journey-panel h3{font-size:25px}
+
+  .case-question{padding:25px}
+  .case-question h3{font-size:25px}
+
+  .outcome-loop{grid-template-columns:1fr 1fr}
+
+  .contact-card{padding:28px 24px;gap:30px}
+  .contact-action{width:100%}
+  .contact-action .button{width:100%}
+  .contact-action .text-link{font-size:13px}
+
+  .product-shot-label{display:grid;gap:6px}
+  .product-shot-label small{text-align:left}
+  .decision-ui-metrics{grid-template-columns:1fr 1fr}
+  .decision-ui-cards{grid-template-columns:1fr}
+  .decision-ui-cards article{min-height:auto}
+  .architecture-map{gap:10px}
+}
+
+@media(max-width:420px){
+  .signal-cloud{grid-template-columns:1fr}
+  .outcome-loop{grid-template-columns:1fr}
+  .trust-dimensions{grid-template-columns:1fr}
+}
