@@ -61,3 +61,8 @@ After enabling GitHub Pages, configure the DNS records at the domain provider an
 ## Notes
 
 The contact form is currently a visual/demo form and does not send data. Connect it to the chosen CRM or form handler before using it for live lead capture.
+
+
+## Deployment
+
+Published with GitHub Pages from the `main` branch using the Pages Actions workflow.
