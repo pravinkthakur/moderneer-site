@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+<rect width="1400" height="820" rx="28" fill="#0B1119"/>
+<rect x="1" y="1" width="1398" height="818" rx="27" fill="none" stroke="#26313D"/>
+<text x="54" y="68" fill="#7D8999" font-family="Inter,Arial,sans-serif" font-size="18" letter-spacing="3">TELOS STUDIO · DECISION INTELLIGENCE</text>
+<rect x="38" y="106" width="220" height="668" rx="16" fill="#0A1017" stroke="#202A35"/>
+<rect x="58" y="144" width="180" height="48" rx="9" fill="#10262B"/>
+<text x="78" y="175" fill="#BFEFF2" font-family="Inter,Arial,sans-serif" font-size="16">Decision agenda</text>
+<text x="78" y="235" fill="#778391" font-family="Inter,Arial,sans-serif" font-size="16">Recommendations</text>
+<text x="78" y="287" fill="#778391" font-family="Inter,Arial,sans-serif" font-size="16">Considerations</text>
+<text x="78" y="339" fill="#778391" font-family="Inter,Arial,sans-serif" font-size="16">Assessment</text>
+<text x="78" y="391" fill="#778391" font-family="Inter,Arial,sans-serif" font-size="16">Evidence</text>
+<text x="308" y="158" fill="#F6F7F9" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700">Executive Decision Agenda</text>
+<text x="308" y="195" fill="#768493" font-family="Inter,Arial,sans-serif" font-size="18">Priority decisions derived from connected enterprise evidence</text>
+<rect x="308" y="230" width="1038" height="478" rx="20" fill="#0D141E" stroke="#26313D"/>
+<rect x="342" y="270" width="104" height="34" rx="17" fill="#2B171A"/>
+<text x="366" y="293" fill="#FF9698" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700">CRITICAL</text>
+<rect x="462" y="270" width="166" height="34" rx="17" fill="#2B2617"/>
+<text x="482" y="293" fill="#E6C47A" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700">NEEDS VALIDATION</text>
+<text x="342" y="358" fill="#F6F7F9" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700">Decide how to close the predictive capability gap</text>
+<text x="342" y="395" fill="#F6F7F9" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700">without increasing operational exposure</text>
+<g font-family="Inter,Arial,sans-serif">
+<rect x="342" y="440" width="460" height="96" rx="13" fill="#101923" stroke="#202A35"/>
+<text x="364" y="468" fill="#6F7B8A" font-size="12" font-weight="700">EXECUTIVE ASK</text>
+<text x="364" y="500" fill="#C7D0DA" font-size="17">Approve immediate validation and containment.</text>
+<rect x="824" y="440" width="488" height="96" rx="13" fill="#101923" stroke="#202A35"/>
+<text x="846" y="468" fill="#6F7B8A" font-size="12" font-weight="700">WHY NOW</text>
+<text x="846" y="500" fill="#C7D0DA" font-size="17">Competitive and operational exposure is increasing.</text>
+<rect x="342" y="558" width="970" height="112" rx="13" fill="#101923" stroke="#202A35"/>
+<text x="364" y="588" fill="#6F7B8A" font-size="12" font-weight="700">EVIDENCE BASIS</text>
+<text x="364" y="620" fill="#C7D0DA" font-size="17">Linked technology risks, architecture findings, operational signals and delivery evidence.</text>
+</g>
+</svg>
