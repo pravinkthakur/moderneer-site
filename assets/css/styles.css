@@ -600,3 +600,10 @@ body.site{font-size:16px;line-height:1.58}
 .core-stages span{font-size:12px !important}
 .product-shot-label{line-height:1.4}
 .deep-copy>p,.section-intro>p{max-width:760px}
+
+
+/* Decision-state labels are primary information, not fine print. */
+.evidence-state span,
+.readiness-state span{
+  font-size:12px !important;
+}
