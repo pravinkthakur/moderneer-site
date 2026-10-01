@@ -525,3 +525,78 @@ body.site{font-size:16px;line-height:1.58}
   .outcome-loop{grid-template-columns:1fr}
   .trust-dimensions{grid-template-columns:1fr}
 }
+
+
+/* Final UX QA readability floor */
+.system-core small,
+.core-stages span,
+.problem-stack article>span,
+.scope-question small,
+.scope-fields article>span,
+.decision-loop article>span,
+.mirror-top,
+.trust-dimensions small,
+.readiness-state small,
+.journey-nav button span,
+.journey-panel small,
+.decision-mini>span,
+.commit-mini b,
+.case-question small,
+.case-grid small,
+.technology-proof span,
+.telos-loop-card>small,
+.loop-vertical b,
+.chapter-kicker span,
+.product-chrome,
+.wizard-steps span,
+.wizard-content label,
+.field-row small,
+.connector-list small,
+.pack-callout small,
+.assessment-head,
+.pillar-bars span,
+.product-shot-label small,
+.decision-anatomy small,
+.state-pairs small,
+.consequence-grid small,
+.commitment-head,
+.commitment-board article small,
+.committed,
+.commitment-meta small,
+.learn-path small,
+.metric-row small,
+.arch-col small,
+.architecture-principles span,
+.ui-title>small,
+.mirror-gauges-ui small,
+.decision-ui-top,
+.decision-ui-metrics span,
+.decision-ui-cards small,
+.decision-ui-cards em,
+.decision-ui-cards>article>span,
+.chat-ui-top span,
+.chat-ui-top i,
+.chat-assistant small,
+.chat-assistant span,
+.chat-ui-input b,
+.executive-lenses>small,
+.recommendation-strip small,
+.recommendation-strip article span{
+  font-size:12px !important;
+}
+
+.field-row b,
+.pack-callout p,
+.trust-definitions p,
+.state-pairs p,
+.consequence-grid p,
+.commitment-meta b,
+.metric-row span,
+.arch-col span{
+  font-size:13px !important;
+}
+
+.signal-cloud span,
+.core-stages span{font-size:12px !important}
+.product-shot-label{line-height:1.4}
+.deep-copy>p,.section-intro>p{max-width:760px}
