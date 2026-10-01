@@ -4,68 +4,38 @@ Official marketing site for **Moderneer** and **Telos Studio**.
 
 ## Positioning
 
-- **Moderneer** — Outcome Engineering for enterprise technology leaders.
-- **Telos Studio** — the executive decision-intelligence layer for Moderneer.
+- **Moderneer** — the Decision Engineering platform that turns fragmented signals into evidence-backed judgement.
+- **Telos Studio** — the System of Judgement where leaders frame questions, inspect evidence, assess trust, compare paths, decide, commit and learn.
+- **Outcome Engineering** — the operating philosophy that closes the loop from decision to measurable outcome and new evidence.
+- **Technology & Transformation Intelligence** — the deepest packaged application today, with 12 pillars and 365+ evidence checks.
 
-## Executive narrative
+## Homepage narrative — the 10-minute pitch
 
-The homepage follows a single-page buying story:
+**Signals → missing judgement layer → decision-first framing → Frame / Connect / Trust / Understand / Decide / Commit / Learn → Telos Studio → cross-functional decision examples → Technology & Transformation proof point → Outcome Engineering → start with one decision.**
 
-**Problem → Outcome Engineering → Evidence → What you get → Telos Studio → Where it fits → Trust → Executive briefing**
+## Telos narrative — the 30-minute deep dive
 
-The Telos page is a product-level deep dive:
+1. Frame the decision
+2. Build the signal context
+3. Assess and understand
+4. Know what to trust
+5. Build the Decision Agenda
+6. Explore options and consequences
+7. Commit and govern
+8. Ask the decision context
+9. Learn over time
+10. Architecture and control
 
-**Decision Agenda → Executive workflow → Fix Now / Invest / Assure → Decision trust → Evidence → Briefing**
+## Product truth principles
 
-All product claims are grounded in the current Moderneer/Telos implementation. Public copy avoids invented customers, ROI claims or certifications.
+- Do not position Telos as CTO-only.
+- Do not position 12 pillars / 365+ checks as the entire platform; they are the Technology & Transformation pack.
+- Do not claim “any data, any decision” as unlimited current integration coverage. Prefer: **Any signal can become evidence. Any decision can define the evidence it needs.**
+- Keep evidence provenance, uncertainty, confidence, reliability, integrity and decision readiness visible.
+- Distinguish current packaged connectors from the broader evidence model.
+- Use real product capabilities and clearly label illustrative decision examples.
+- Avoid invented customers, ROI, certifications or implementation claims.
 
-## Structure
+## Deployment
 
-```text
-.
-├── index.html
-├── telos.html
-├── 404.html
-├── CNAME
-├── robots.txt
-├── sitemap.xml
-├── assets/
-│   ├── css/styles.css
-│   ├── js/app.js
-│   └── images/
-├── design/
-└── docs/
-```
-
-## Local preview
-
-Run any static web server from the repository root:
-
-```bash
-python -m http.server 8080
-```
-
-Then open `http://localhost:8080`.
-
-## GitHub Pages
-
-The site deploys from `main` using `.github/workflows/pages.yml`.
-
-`CNAME` is set to:
-
-```text
-moderneer.co.uk
-```
-
-## Contact
-
-The executive briefing CTA opens email to `hello@moderneer.co.uk`. No non-functional demo form is published.
-
-## Design principles
-
-- Premium enterprise editorial rather than generic SaaS
-- One continuous story on the homepage
-- Dark Telos product sections provide the strongest visual contrast
-- Real product constructs instead of vague feature claims
-- Visible uncertainty and evidence provenance are part of the product story
-- Responsive navigation and reduced-motion support are included
+The static site deploys from `main` through `.github/workflows/pages.yml` to `https://moderneer.co.uk/`.
