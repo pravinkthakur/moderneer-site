@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+<title>Moderneer mark</title>
+<rect width="128" height="128" rx="28" fill="#07090d"/>
+<g transform="translate(64 64) rotate(45) translate(-64 -64)">
+  <rect x="29" y="29" width="70" height="70" fill="none" stroke="#F6F7F9" stroke-width="4"/>
+  <rect x="43" y="43" width="42" height="42" fill="none" stroke="#6AE6EF" stroke-width="4"/>
+</g>
+</svg>
