@@ -58,10 +58,15 @@ moderneer.co.uk
 
 After enabling GitHub Pages, configure the DNS records at the domain provider and then enable HTTPS in GitHub Pages when available.
 
-## Notes
+## Experience
 
-The contact form is currently a visual/demo form and does not send data. Connect it to the chosen CRM or form handler before using it for live lead capture.
+The homepage is a single-page executive narrative:
 
+**Problem → Outcome Engineering → Evidence → Telos Studio → Action → Outcomes → Trust → Executive briefing**
+
+The design deliberately uses a light, editorial Moderneer canvas with a dark product-led Telos section so the product reveal carries the strongest visual weight.
+
+The executive briefing CTA currently opens an email to `hello@moderneer.com`; there is no non-functional demo form on the live homepage.
 
 ## Deployment
 
