@@ -30,7 +30,7 @@ Primary category language:
 ## Product hierarchy
 
 - **Moderneer Edge** — distributed evidence acquisition and source-level analysis.
-- **Moderneer Platform** — configurable models, rules and orchestration.
+- **Moderneer Platform** — shared authentication, assessment configuration, scoring, run governance and API services.
 - **Telos Studio** — leadership workspace for posture, recommendations, Decision Agenda, alternatives and commitments.
 - **Technology & Transformation Intelligence** — deepest packaged application today.
 
@@ -70,6 +70,16 @@ Customer receives:
 ## Horizontal potential
 
 Telos includes multiple executive consideration lenses and is designed to expand across domains. Public copy must distinguish this design intent from current packaged domain maturity.
+
+## Current implementation facts
+
+- Edge and Telos report version `6.0.1` in their current READMEs.
+- Edge models 10 current data-stack types: source control, Jira, Confluence, CI/CD, CloudOpEx, filesystem, ServiceNow, Salesforce, OpenTelemetry and external intelligence.
+- Coverage is not equivalent across all stacks; the Edge README explicitly notes partial/in-progress OpenTelemetry behavior in places.
+- Telos currently includes run operation, multi-stack control-plane views, risk intelligence, recommendations, Decision Agenda, commitments, run-context chat and role/permission-aware access management.
+- Confidence, reliability and integrity are run-specific trust measures on a 1–5 scale. Public examples must not look like customer or company scores.
+- External-intelligence implementation exists, but public messaging must not imply uniformly mature competitive-intelligence coverage.
+- Technology & Transformation remains the deepest packaged application; executive consideration packs express judgement lenses rather than equal domain maturity.
 
 ## Capability claims to avoid
 
