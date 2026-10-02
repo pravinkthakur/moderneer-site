@@ -51,6 +51,12 @@ The March 2026 GTM deck describes a **30-day Transformation Baseline** on one cr
 - Treat cross-functional examples outside the packaged application as illustrative unless the implementation explicitly supports them.
 - Competitive intelligence and meeting/communication intelligence should not be marketed as mature current capabilities merely because they appear in product direction.
 - Avoid invented customers, ROI, certifications or unsupported integrations.
+- The current Edge model contains 10 data-stack types; coverage and packaged maturity differ by source, and some OpenTelemetry pathways remain in hardening.
+- Architecture wording should reflect the current split: Edge orchestrates and analyses runs; Platform provides shared auth/config/scoring/run-governance APIs; Telos is the desktop decision and execution workspace.
+
+## Full product context
+
+See [`docs/MODERNEER_CONTEXT.md`](docs/MODERNEER_CONTEXT.md) for the consolidated product, architecture, capability, maturity and public-claims context used to keep executive messaging aligned with the current implementation.
 
 ## Deployment
 
