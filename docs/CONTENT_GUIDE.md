@@ -61,9 +61,9 @@ Avoid:
 
 **Systems of record remain the source of truth.**
 
-- Edge acquires and interprets evidence close to source.
-- Platform provides configurable models, rules and orchestration.
-- Telos provides the leadership workspace for posture, recommendations, decisions and commitments.
+- Edge acquires, normalises, links and analyses evidence close to source.
+- Platform provides authentication, assessment configuration, scoring, run governance and shared API services.
+- Telos provides the desktop leadership workspace for posture, recommendations, decisions, commitments and contextual query.
 
 ## Horizontal positioning
 
