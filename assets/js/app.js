@@ -40,16 +40,18 @@ journeyButtons.forEach((button) => {
 
 const cases = {
   growth: {
-    question: 'Is Market X ready to accelerate, and what does leadership need to decide before committing?',
-    audience: 'CEO · CFO · COO · 12-month horizon',
+    title: 'Market expansion',
+    priorities: 'Run priorities · Market Readiness Risk · Investment Efficiency · Capacity Constraints',
+    theme: 'Decide whether to accelerate expansion now or phase the investment.',
     signals: 'Salesforce pipeline · external intelligence · available files · operational context',
     gap: 'Operational readiness in the new market is not yet evidenced strongly enough.',
     readiness: 'Needs validation',
     next: 'Validate operating capacity and the available economic evidence before leadership commits to acceleration.'
   },
   technology: {
-    question: 'What does the evidence say about platform modernisation, and which choices require leadership judgement?',
-    audience: 'CTO · CIO · CFO · 18-month horizon',
+    title: 'Platform modernisation',
+    priorities: 'Run priorities · Value Realisation · Time to Value · Operational Disruption Risk',
+    theme: 'Decide how to sequence modernisation while protecting service continuity.',
     signals: 'Architecture findings · source control · delivery flow · incidents · observability · cloud cost · roadmap dependencies',
     gap: 'Migration complexity and transition risk remain insufficiently quantified.',
     readiness: 'Needs validation',
@@ -65,8 +67,9 @@ document.querySelectorAll('[data-case]').forEach((button) => {
       b.setAttribute('aria-selected', String(b === button));
     });
     const mapping = {
-      '[data-case-question]': data.question,
-      '[data-case-audience]': data.audience,
+      '[data-case-title]': data.title,
+      '[data-case-priorities]': data.priorities,
+      '[data-case-theme]': data.theme,
       '[data-case-signals]': data.signals,
       '[data-case-gap]': data.gap,
       '[data-case-readiness]': data.readiness,

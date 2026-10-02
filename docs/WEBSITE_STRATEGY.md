@@ -25,7 +25,7 @@ Primary category language:
 
 ## Canonical rule
 
-**The question shapes the evidence. The evidence surfaces the decisions. Leadership makes the judgement.**
+**Priorities focus the assessment. Evidence surfaces the decisions. Leadership makes the judgement.**
 
 ## Product hierarchy
 
@@ -34,18 +34,13 @@ Primary category language:
 - **Telos Studio** — leadership workspace for posture, recommendations, Decision Agenda, alternatives and commitments.
 - **Technology & Transformation Intelligence** — deepest packaged application today.
 
-## Decision Scope
+## Run priorities and considerations
 
-Decision Scope frames:
-- why the work is being done
-- audience
-- horizon
-- business scope
-- considerations
-- evidence availability
-- decision questions
+The public product story follows New Run: configure evidence sources and select executive considerations individually or through Balanced / executive-role preset packs. Considerations focus the assessment; they are not predetermined decisions or required natural-language questions.
 
-It frames the enquiry. It does not pre-determine the final Decision Agenda.
+The separate Decision Scope component in the code includes purpose, audience, horizon, scope, considerations and decision questions. Do not represent that component as the standard New Run flow or imply a required question-entry step.
+
+The marketing examples must distinguish selected run priorities (inputs) from illustrative decision themes (outputs). The consideration catalogue spans business functions; it does not establish equal evidence coverage or packaged maturity across those functions.
 
 ## Decision Agenda
 

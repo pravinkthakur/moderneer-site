@@ -13,19 +13,19 @@ Official marketing site for **Moderneer** and **Telos Studio**.
 
 **Leadership context → relevant evidence → assessment → trust → recommendations / options / considerations → derived Decision Agenda → executive judgement → commitment → learning**
 
-A Decision Scope frames the enquiry. It does **not** mean the final executive decision is known in advance.
+New Run starts with evidence-source configuration and selected executive considerations. These define run priorities; the Decision Agenda emerges from the assessment.
 
 Canonical rule:
 
-**The question shapes the evidence. The evidence surfaces the decisions. Leadership makes the judgement.**
+**Priorities focus the assessment. Evidence surfaces the decisions. Leadership makes the judgement.**
 
 ## Homepage narrative — the 10-minute pitch
 
-**Evidence-rich / judgement-poor → System of Judgement → frame the enquiry → connect / assess / trust → synthesise decision themes → support executive judgement → track commitments → Technology & Transformation proof point → 30-day Transformation Baseline.**
+**Evidence-rich / judgement-poor → System of Judgement → set run priorities → connect / assess / trust → synthesise decision themes → support executive judgement → track commitments → Technology & Transformation proof point → 30-day Transformation Baseline.**
 
 ## Telos narrative — the 30-minute deep dive
 
-1. Frame the enquiry
+1. Set run priorities
 2. Build the evidence context
 3. Assess and understand
 4. Know what to trust
@@ -42,7 +42,7 @@ The March 2026 GTM deck describes a **30-day Transformation Baseline** on one cr
 
 ## Product truth principles
 
-- Do not say Moderneer or Telos "starts with the decision". It starts with leadership intent, a priority, concern or question.
+- Do not say Moderneer or Telos "starts with the decision". It starts with run priorities, selected considerations and relevant evidence sources.
 - Decision Agenda themes are derived from analysed evidence, recommendations, decision options and executive considerations.
 - Telos supports executive judgement; it does not make the executive decision.
 - Systems of record remain the source of truth.

@@ -14,7 +14,7 @@ Moderneer connects fragmented enterprise evidence, assesses what it means, surfa
 
 ## Canonical rule
 
-**The question shapes the evidence. The evidence surfaces the decisions. Leadership makes the judgement.**
+**Priorities focus the assessment. Evidence surfaces the decisions. Leadership makes the judgement.**
 
 ## Canonical loop
 
@@ -24,7 +24,7 @@ Moderneer connects fragmented enterprise evidence, assesses what it means, surfa
 
 Use:
 - leadership context
-- enquiry / priority / question
+- run priorities / executive considerations
 - evidence-rich, judgement-poor
 - System of Judgement
 - operating judgement layer
@@ -47,6 +47,8 @@ Use:
 
 Avoid:
 - "start with the decision"
+- implying New Run requires an explicit decision question
+- presenting illustrative marketing layouts as exact product screenshots
 - "the decision defines the evidence"
 - language implying Telos makes the final executive decision
 - "any signal can become evidence" as an absolute claim

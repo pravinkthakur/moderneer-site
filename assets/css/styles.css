@@ -620,3 +620,32 @@ body.site{font-size:16px;line-height:1.58}
 @media(max-width:620px){
   .decision-loop{grid-template-columns:1fr}
 }
+
+/* Run priorities: distinguish selected inputs from derived decision themes. */
+.run-priorities-visual{padding:28px}
+.run-priorities-visual>p{font-size:15px;color:var(--muted);margin:0 0 20px}
+.run-priorities-visual>small{display:block;font-size:12px;letter-spacing:.06em;color:var(--muted)}
+.preset-pack-list{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 26px}
+.preset-pack-list span{padding:7px 11px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:var(--paper-2)}
+.selected-priorities{list-style:none;padding:0;margin:12px 0 20px;display:grid;gap:8px}
+.selected-priorities li{display:flex;align-items:center;gap:10px;padding:11px 13px;border:1px solid #c5ded5;border-radius:10px;background:#edf7f3;font-size:14px}
+.selected-priorities li::before{content:'✓';color:#226d53;font-weight:700}
+.run-priorities-visual>.selection-note{font-size:12px;margin:0}
+.consideration-catalogue{margin-top:64px;scroll-margin-top:100px}
+.consideration-catalogue h3{font-size:28px;line-height:1.2;letter-spacing:-.03em;margin:0 0 14px}
+.consideration-catalogue>p{max-width:850px;color:var(--muted);font-size:16px;margin:0 0 24px}
+.consideration-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
+.consideration-groups details{border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden}
+.consideration-groups summary{padding:17px 20px;cursor:pointer;font-size:15px;font-weight:650}
+.consideration-groups summary:focus-visible{outline:2px solid var(--cyan-2);outline-offset:-4px}
+.consideration-groups ul{margin:0;padding:0 24px 20px 40px;color:var(--muted);font-size:14px}
+.consideration-groups li+li{margin-top:5px}
+.case-grid>div:nth-child(2n){border-right:1px solid var(--line)}
+.case-grid>div:nth-child(2n+1){border-right:0}
+.case-grid>div:first-child{grid-column:1/-1;border-right:0;border-bottom:1px solid var(--line)}
+@media(max-width:640px){
+  .run-priorities-visual{padding:22px}
+  .product-chrome{height:auto;min-height:46px;gap:12px;padding:12px 17px;flex-wrap:wrap}
+  .consideration-groups{grid-template-columns:1fr}
+  .consideration-catalogue{margin-top:44px}
+}
