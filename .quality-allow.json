@@ -1,0 +1,7 @@
+[
+  {
+    "path": "tools/quality/quality-kit.test.mjs",
+    "rule": "focused-test",
+    "reason": "The shared kit's own test writes a .only line into a temporary fixture to prove the rule fires. It focuses nothing in this repository."
+  }
+]
