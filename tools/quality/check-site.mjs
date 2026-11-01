@@ -265,19 +265,28 @@ export function checkSite(root, config) {
   }
 
   if (config.published) {
-    const { allowedTopLevel, excludedTooling, workflow } = config.published;
+    const { allowedTopLevel, excludedTooling, workflow, jekyllConfig } = config.published;
     const excluded = (p) => excludedTooling.some((e) => p === e || (e.endsWith('/') && p.startsWith(e)));
     const published = tracked.filter((p) => !p.startsWith('.git/') && !p.startsWith('.github/') && !excluded(p));
     for (const p of published) {
       const top = p.includes('/') ? `${p.split('/')[0]}/` : p;
       if (!allowedTopLevel.includes(top)) report(p, 0, 'unexpected-publication', `${top} would be published; add it to published.allowedTopLevel only if it is meant to be public`);
     }
+    if (jekyllConfig) {
+      const text = files.has(jekyllConfig) ? readFileSync(join(root, jekyllConfig), 'utf8') : '';
+      for (const e of excludedTooling.filter((x) => !x.startsWith('.'))) if (!text.includes(e.split('/')[0])) report(jekyllConfig, 0, 'tooling-published', `branch deployment would publish ${e}; list it under exclude`);
+    }
     if (workflow) {
-      const text = readFileSync(join(root, workflow), 'utf8');
-      for (const e of excludedTooling) if (!text.includes(e.replace(/\/$/, ''))) report(workflow, 0, 'tooling-published', `the deploy job does not remove ${e} before uploading`);
+      const removals = readFileSync(join(root, workflow), 'utf8').split(/\r?\n/).filter((l) => /\brm -rf\b/.test(l)).join(' ').split(/\s+/);
+      for (const e of excludedTooling) if (!removals.includes(e.replace(/\/$/, ''))) report(workflow, 0, 'tooling-published', `the deploy job does not remove ${e} before uploading`);
     }
   }
-  return { findings, pages };
+  // A recorded defect stays visible on every run and must be removed from the config once fixed; anything else fails.
+  const known = config.knownDefects ?? [];
+  const isKnown = (f, k) => f.path === k.path && f.rule === k.rule && f.detail.includes(k.detail);
+  const stale = known.filter((k) => !findings.some((f) => isKnown(f, k)));
+  for (const k of stale) findings.push({ path: k.path, line: 0, rule: 'known-defect-stale', detail: `"${k.detail}" no longer occurs; remove it from knownDefects` });
+  return { findings: findings.filter((f) => !known.some((k) => isKnown(f, k))), pages, known: known.filter((k) => !stale.includes(k)) };
 }
 
 export const loadConfig = (root) => JSON.parse(readFileSync(join(root, 'tools/quality/site.config.json'), 'utf8'));
@@ -285,8 +294,9 @@ export const loadConfig = (root) => JSON.parse(readFileSync(join(root, 'tools/qu
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
   const config = loadConfig(root);
-  const { findings, pages } = checkSite(root, config);
+  const { findings, pages, known } = checkSite(root, config);
   for (const f of findings) console.error(`${f.path}${f.line ? `:${f.line}` : ''}  ${f.rule}  ${f.detail}`);
+  for (const k of known) console.log(`KNOWN DEFECT ${k.path}  ${k.rule}  ${k.detail}: ${k.reason}`);
   for (const risk of config.published?.knownRisks ?? []) console.log(`KNOWN RISK ${risk.id}: ${risk.detail}`);
   console.log(findings.length ? `${findings.length} site finding(s) across ${pages.length} page(s).` : `Site checks passed on ${pages.length} page(s): ${pages.join(', ')}.`);
   process.exitCode = findings.length ? 1 : 0;

@@ -71,6 +71,17 @@ describe('checkSite fails each defect it claims to catch', () => {
   it('finds a broken url() in a stylesheet', () => {
     assert.ok(rules({ 'index.html': page(), 'a.css': 'body{background:url("gone.png")}' }).includes('broken-reference'));
   });
+  it('fails when a branch deployment would publish tooling', () => {
+    const config = { published: { allowedTopLevel: ['index.html', '_config.yml'], excludedTooling: ['tools/'], jekyllConfig: '_config.yml' } };
+    assert.ok(rules({ 'index.html': page(), '_config.yml': 'title: x\n' }, config).includes('tooling-published'));
+    assert.deepEqual(rules({ 'index.html': page(), '_config.yml': 'exclude: [tools]\n' }, config), []);
+  });
+  it('tolerates only the exact recorded defect and fails once it is fixed', () => {
+    const broken = page({ body: '<h1>h</h1><a href="#gone">x</a><a href="#other">y</a>' });
+    const knownDefects = [{ path: 'index.html', rule: 'broken-fragment', detail: '#gone', reason: 'recorded' }];
+    assert.deepEqual(rules({ 'index.html': broken }, { knownDefects }), ['broken-fragment']);
+    assert.deepEqual(rules({ 'index.html': page({ body: '<h1>h</h1><a href="#gone" id="gone">x</a>' }) }, { knownDefects }), ['known-defect-stale']);
+  });
   it('requires root-relative references on the not-found page', () => {
     const files = (href) => ({ 'index.html': page(), '404.html': page({ title: 'Missing', head: `<link rel="stylesheet" href="${href}">` }), 'a.css': 'body{}' });
     assert.ok(rules(files('a.css'), { notFoundPage: '404.html' }).includes('not-found-relative-reference'));
@@ -99,7 +110,7 @@ describe('checkSite fails each defect it claims to catch', () => {
   });
   it('fails when the deploy workflow stops removing tooling', () => {
     const config = { published: { allowedTopLevel: ['index.html', 'wf.yml'], excludedTooling: ['tools/'], workflow: 'wf.yml' } };
-    assert.ok(rules({ 'index.html': page(), 'wf.yml': 'path: .' }, config).includes('tooling-published'));
+    assert.ok(rules({ 'index.html': page(), 'wf.yml': 'path: tools/x' }, config).includes('tooling-published'));
     assert.deepEqual(rules({ 'index.html': page(), 'wf.yml': 'run: rm -rf tools' }, config), []);
   });
 });
