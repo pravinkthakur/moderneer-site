@@ -28,6 +28,11 @@ jobs:
         with:
           node-version: 22
 
+      - name: IP protection (licence declarations, notices, secrets)
+        run: |
+          node --test tools/ip/ip-gate.test.mjs
+          node tools/ip/ip-gate.mjs source
+
       - name: Secret scan
         run: node tools/quality/scan-secrets.mjs
 
@@ -68,15 +73,26 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
 
+      # The gate is copied out first: the published tree is checked after everything internal has left it
+      - name: Keep the IP gate outside the published tree
+        run: |
+          mkdir -p "$RUNNER_TEMP/ip/tools"
+          cp -r tools/ip "$RUNNER_TEMP/ip/tools/ip"
+          cp ip-policy.json "$RUNNER_TEMP/ip/ip-policy.json"
+
       # The upload below takes the whole tree. Quality tooling stays out of the public site; see docs/quality/README.md.
       - name: Remove quality tooling from the published tree
-        run: rm -rf tools docs/quality .githooks .gitattributes .quality-allow.json .secret-scan-allow.json
+        run: rm -rf tools docs design .githooks .gitattributes .gitignore .quality-allow.json .secret-scan-allow.json ip-policy.json
 
       # Owner decision 2026-11-02: no Markdown file is ever published. The check fails the deploy if the removal ever misses one.
       - name: Remove Markdown from the published tree
         run: |
           find . -path ./.git -prune -o -type f -iname '*.md' -exec rm -f {} +
           if [ -n "$(find . -path ./.git -prune -o -type f -iname '*.md' -print)" ]; then echo "::error::Markdown would be published"; exit 1; fi
+
+      # Only what the distribution manifest in ip-policy.json approves may publish
+      - name: Published tree matches the distribution manifest
+        run: node "$RUNNER_TEMP/ip/tools/ip/ip-gate.mjs" artefact public-site .
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3

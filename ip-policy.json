@@ -1,0 +1,45 @@
+{
+  "$comment": "Read by tools/ip/ip-gate.mjs.",
+  "owner": "Moderneer Ltd",
+  "copyrightStartYear": 2026,
+  "copyrightEndYear": 2026,
+  "classification": {
+    "**": "public: GitHub Pages site in a public repository"
+  },
+  "noticeRequired": [
+    "**"
+  ],
+  "noticeExempt": [],
+  "declarationAllow": [],
+  "thirdPartyPaths": [],
+  "firstPartyPackages": [
+    "@moderneer/*"
+  ],
+  "lockfiles": [],
+  "dependencyDecisions": [],
+  "artefacts": {
+    "public-site": {
+      "distribution": "public",
+      "ignore": [
+        ".git/**",
+        ".github/**"
+      ],
+      "allow": [
+        "*.html",
+        "assets/**",
+        "CNAME",
+        "robots.txt",
+        "sitemap.xml",
+        "COPYRIGHT",
+        "LICENSE",
+        ".nojekyll"
+      ],
+      "required": [
+        "LICENSE",
+        "COPYRIGHT"
+      ]
+    }
+  },
+  "requiredAttestations": [],
+  "legalApprovals": []
+}
