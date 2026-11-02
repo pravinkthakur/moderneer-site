@@ -78,6 +78,13 @@ jobs:
           find . -path ./.git -prune -o -type f -iname '*.md' -exec rm -f {} +
           if [ -n "$(find . -path ./.git -prune -o -type f -iname '*.md' -print)" ]; then echo "::error::Markdown would be published"; exit 1; fi
 
+      # Everything that would publish, by path and type. A file that is not on this list stops the deploy.
+      - name: Only approved files publish
+        run: |
+          find . \( -path ./.git -o -path ./.github \) -prune -o -type f -print > "$RUNNER_TEMP/published.txt"
+          if grep -v -i -E '^\./((index|telos|404)\.html|CNAME|COPYRIGHT|LICENSE|robots\.txt|sitemap\.xml|\.nojekyll|assets/[a-z0-9/_-]+(\.[a-z0-9_-]+)?\.(css|js|svg|png|jpe?g|webp|ico|woff2?))$' "$RUNNER_TEMP/published.txt"; then echo "::error::The files above are not approved for publication"; exit 1; fi
+          test -f LICENSE
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:

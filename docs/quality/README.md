@@ -34,9 +34,9 @@ git config core.hooksPath .githooks
 
 `pre-commit` runs the secret scan on staged content, hygiene and site checks. `pre-push` runs everything.
 
-## Known risk R-23: internal documents are public
+## Published files
 
-The deploy job publishes the whole tree, so `docs/`, `design/`, `README.md` and `.gitignore` are live at https://moderneer.co.uk/. The gate does not change that: `site.config.json` records it, each run prints it, and only a *new* top-level path fails. Removing them is a decision for the site owner.
+The deploy job removes tooling, `docs/`, `design/`, `.gitignore` and every Markdown file, then fails if any remaining file is not on its list of approved paths and types. These documents are still readable in the public repository.
 
 ## Not covered
 

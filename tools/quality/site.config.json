@@ -14,6 +14,8 @@
   "requiredFiles": [
     ".nojekyll",
     "CNAME",
+    "LICENSE",
+    "COPYRIGHT",
     "robots.txt",
     "sitemap.xml",
     "assets/css/styles.css",
