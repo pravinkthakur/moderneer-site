@@ -3,6 +3,3 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
-
-# IP gate reports (tools/ip/ip-gate.mjs --report)
-ip-reports/

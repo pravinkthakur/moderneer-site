@@ -64,8 +64,7 @@
       ".gitattributes",
       ".gitignore",
       ".quality-allow.json",
-      ".secret-scan-allow.json",
-      "ip-policy.json"
+      ".secret-scan-allow.json"
     ],
     "knownRisks": []
   }

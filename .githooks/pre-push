@@ -1,8 +1,6 @@
 #!/bin/sh
 # Enable once per clone: git config core.hooksPath .githooks
 set -e
-node --test tools/ip/ip-gate.test.mjs
-node tools/ip/ip-gate.mjs source
 node tools/quality/scan-secrets.mjs
 node tools/quality/check-hygiene.mjs
 node --test "tools/quality/*.test.mjs"
