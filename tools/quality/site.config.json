@@ -2,12 +2,20 @@
   "origin": "https://moderneer.co.uk",
   "cname": "moderneer.co.uk",
   "requireCanonical": true,
-  "notIndexed": ["404.html"],
+  "notIndexed": [
+    "404.html"
+  ],
   "notFoundPage": "404.html",
-  "requiredPages": ["index.html", "telos.html", "404.html"],
+  "requiredPages": [
+    "index.html",
+    "telos.html",
+    "404.html"
+  ],
   "requiredFiles": [
     ".nojekyll",
     "CNAME",
+    "LICENSE",
+    "COPYRIGHT",
     "robots.txt",
     "sitemap.xml",
     "assets/css/styles.css",
@@ -17,20 +25,49 @@
   ],
   "smoke": {
     "pages": [
-      { "path": "/", "title": "A System of Judgement", "contains": ["Turn signals into decisions", "id=\"contact\""] },
-      { "path": "/telos.html", "title": "Telos Studio", "contains": ["A system of judgement, not another system of record."] }
+      {
+        "path": "/",
+        "title": "A System of Judgement",
+        "contains": [
+          "Turn signals into decisions",
+          "id=\"contact\""
+        ]
+      },
+      {
+        "path": "/telos.html",
+        "title": "Telos Studio",
+        "contains": [
+          "A system of judgement, not another system of record."
+        ]
+      }
     ],
     "notFound": "moderneer"
   },
   "published": {
     "workflow": ".github/workflows/pages.yml",
-    "allowedTopLevel": [".gitignore", ".nojekyll", "404.html", "CNAME", "COPYRIGHT", "README.md", "assets/", "design/", "docs/", "index.html", "robots.txt", "sitemap.xml", "telos.html"],
-    "excludedTooling": ["tools/", "docs/quality/", ".githooks/", ".gitattributes", ".quality-allow.json", ".secret-scan-allow.json"],
-    "knownRisks": [
-      {
-        "id": "R-23",
-        "detail": "docs/ and design/ (internal positioning) and README.md are published at https://moderneer.co.uk/. Unchanged by this gate; a decision for the site owner."
-      }
-    ]
+    "allowedTopLevel": [
+      ".nojekyll",
+      "404.html",
+      "CNAME",
+      "COPYRIGHT",
+      "LICENSE",
+      "README.md",
+      "assets/",
+      "index.html",
+      "robots.txt",
+      "sitemap.xml",
+      "telos.html"
+    ],
+    "excludedTooling": [
+      "tools/",
+      "docs/",
+      "design/",
+      ".githooks/",
+      ".gitattributes",
+      ".gitignore",
+      ".quality-allow.json",
+      ".secret-scan-allow.json"
+    ],
+    "knownRisks": []
   }
 }

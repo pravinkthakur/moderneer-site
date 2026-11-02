@@ -1,4 +1,14 @@
 #!/usr/bin/env node
+/*
+ * Copyright (c) 2026 Moderneer Ltd.
+ * All rights reserved.
+ *
+ * Proprietary software.
+ * No licence or permission to use, copy,
+ * modify, redistribute or sublicense this
+ * software is granted except under an
+ * express written agreement with Moderneer Ltd.
+ */
 /**
  * HTTP smoke check. Serves the tracked files the way GitHub Pages does (index.html for directories, 404.html with status 404 for
  * anything unknown, no directory listings) and requests every page and everything it references. Scripts must parse. No browser, no

@@ -1,4 +1,14 @@
 #!/usr/bin/env node
+/*
+ * Copyright (c) 2026 Moderneer Ltd.
+ * All rights reserved.
+ *
+ * Proprietary software.
+ * No licence or permission to use, copy,
+ * modify, redistribute or sublicense this
+ * software is granted except under an
+ * express written agreement with Moderneer Ltd.
+ */
 /**
  * Static checks for a hand-written HTML site: markup and metadata, internal links and fragments, referenced and required assets,
  * basic accessibility (lang, title, one h1, alt text, labels, accessible names) and what the deployment would publish.
