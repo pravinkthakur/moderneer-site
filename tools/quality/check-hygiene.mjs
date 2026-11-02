@@ -1,4 +1,14 @@
 #!/usr/bin/env node
+/*
+ * Copyright (c) 2026 Moderneer Ltd.
+ * All rights reserved.
+ *
+ * Proprietary software.
+ * No licence or permission to use, copy,
+ * modify, redistribute or sublicense this
+ * software is granted except under an
+ * express written agreement with Moderneer Ltd.
+ */
 /**
  * Repository hygiene gate: stops what a passing build would not catch.
  *   - tracked credentials files, browser sessions, customer outputs and oversized generated files

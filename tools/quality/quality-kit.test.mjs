@@ -1,3 +1,13 @@
+/*
+ * Copyright (c) 2026 Moderneer Ltd.
+ * All rights reserved.
+ *
+ * Proprietary software.
+ * No licence or permission to use, copy,
+ * modify, redistribute or sublicense this
+ * software is granted except under an
+ * express written agreement with Moderneer Ltd.
+ */
 // node --test tools/quality/quality-kit.test.mjs
 import assert from 'node:assert/strict';
 import { execFileSync, spawnSync } from 'node:child_process';
