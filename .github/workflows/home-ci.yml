@@ -1,0 +1,40 @@
+name: Home CI - Moderneer Site
+
+# No production publishing from branches. Runner must be registered before merge.
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: home-ci-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    if: github.actor == 'pravinkthakur'
+    runs-on: [self-hosted, Linux, X64, moderneer-site]
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 22
+
+      - name: Run checks under machine-wide resource lock
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/moderneer-ci"
+          exec 9>"$HOME/moderneer-ci/heavy-ci.lock"
+          flock -w 7200 9
+          node tools/quality/scan-secrets.mjs
+          node tools/quality/check-hygiene.mjs
+          node --test 'tools/quality/*.test.mjs'
+          node tools/quality/check-site.mjs
+          node tools/quality/smoke-site.mjs
