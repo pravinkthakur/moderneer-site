@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   verify:
-    if: github.actor == 'pravinkthakur'
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: [self-hosted, Linux, X64, moderneer-site]
     timeout-minutes: 120
     steps:
